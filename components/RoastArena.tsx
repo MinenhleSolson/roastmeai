@@ -1,8 +1,7 @@
-// File: components/RoastArena.tsx
 'use client';
 
 import React, { useState, ChangeEvent } from 'react';
-import { UploadCloud, FileText, Coins } from 'lucide-react'; // Ensure Coins is imported if used
+import { UploadCloud, FileText } from 'lucide-react'; 
 
 // Define props type
 interface RoastArenaProps {
@@ -16,7 +15,7 @@ export default function RoastArena({ initialTokens }: RoastArenaProps) {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [fileName, setFileName] = useState<string>('');
   const [roastResult, setRoastResult] = useState<string | null>(null);
-  const [isLoading, setIsLoading] = useState(false); // <-- Problem likely related to this state
+  const [isLoading, setIsLoading] = useState(false); 
   const [error, setError] = useState<string | null>(null);
   const [tokens, setTokens] = useState(initialTokens);
 
@@ -24,7 +23,7 @@ export default function RoastArena({ initialTokens }: RoastArenaProps) {
   const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
-      const maxSize = 5 * 1024 * 1024; // 5MB example limit
+      const maxSize = 5 * 1024 * 1024;
       if (file.size > maxSize) {
           setError(`File is too large (Max ${maxSize / 1024 / 1024}MB)`);
           setSelectedFile(null);
@@ -66,7 +65,7 @@ export default function RoastArena({ initialTokens }: RoastArenaProps) {
     }
     // --- End Validation ---
 
-    let requestBody: any;
+    let requestBody: string | FormData;
     let headers: HeadersInit = {};
     const apiEndpoint = '/api/roast';
 
