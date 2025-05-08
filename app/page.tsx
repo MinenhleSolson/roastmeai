@@ -47,13 +47,13 @@ export default function LandingPage() {
          {/* ... (rest of the hero section code is unchanged) ... */}
          <div className="max-w-3xl space-y-6">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight">
-            Think Your Ego's Bulletproof?
+            Think Your Ego&apos;s Bulletproof?
             <br />
             <span className="block text-red-500 drop-shadow-md mt-2 md:mt-4">Let Our AI Take a Shot.</span>
           </h1>
 
           <p className="text-lg sm:text-xl md:text-2xl text-slate-300 max-w-xl mx-auto">
-            Upload a pic or spill your bio. We'll serve up a personalized, sizzling roast guaranteed to (harmlessly) humble you.
+            Upload a pic or spill your bio. We&apos;ll serve up a personalized, sizzling roast guaranteed to (harmlessly) humble you.
           </p>
 
           <div>
